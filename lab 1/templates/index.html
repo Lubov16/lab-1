@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Лаб. 1</title>
+    <style>
+        body {
+            font-family: Comic, Comic;
+            margin: 20px;
+            background-image: url('https://clipart-library.com/images/Acbrxpyqi.jpg');
+            background-size: cover;
+            color: rgb(97, 60, 4);
+        }
+        textarea {
+            font-family: 'Comic', Comic; /* Шрифт */
+            font-size: 16px; /* Размер шрифта */
+            width: 100%;
+            height: 150px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.205); /* Полупрозрачный фон */
+            border: none; /* Убираем рамку */
+            color: rgb(122, 84, 26); /* Цвет текста */
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            font-family: 'Comic', Comic; /* Шрифт */
+            font-size: 20px; /* Размер шрифта */
+            background-color: rgba(255, 255, 255, 0.347); /* Полупрозрачный фон */
+            color: rgb(97, 60, 4); /* Цвет текста */
+            border: none;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лаб 1</h1>
+    <form method="post">
+        <textarea name="text" placeholder="Введите текст...">{{ encrypted_text }}</textarea><br>
+        <label for="shift">Выберите сдвиг алфавита:</label>
+        <input type="number" name="shift" value="{{ shift }}" min="0" max="96" step="1"><br>
+        <input type="submit" name="action" value="Зашифровать">
+        <input type="submit" name="action" value="Дешифровать">
+    </form>
+</body>
+</html>
